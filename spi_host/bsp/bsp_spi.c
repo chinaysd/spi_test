@@ -29,21 +29,21 @@ void Spi_Init(void)
 }
 
 
-static void spi_rw(u8 byte)
+static u8 spi_rw(u8 byte)
 {
     
     CS_SET(0);
     while(SPI_GetFlagStatus(SPI_FLAG_TXE)==RESET);
  
     SPI_SendData(byte);
-    #if 0
+    #if 1
     while(SPI_GetFlagStatus(SPI_FLAG_RXNE)==RESET);
  
     byte=SPI_ReceiveData();
     #endif
     CS_SET(1);
     
-    //return byte;
+    return byte;
  
 }
 
