@@ -1,3 +1,0 @@
-main.c
-stm8_interrupt_vector.c
-..\..\..\..\..\..\program files (x86)\cosmic\cxstm8_32k\hstm8\mods0.h
