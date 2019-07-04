@@ -1,0 +1,596 @@
+
+Map of Debug\spi.sm8 from link file Debug\spi.lkf - Sun Mar 20 15:16:40 2016
+
+
+                               --------
+                               Segments
+                               --------
+
+start 00008080 end 00008080 length     0 segment .const
+start 00008089 end 00008173 length   234 segment .text
+start 00004000 end 00004000 length     0 segment .eeprom
+start 00000000 end 00000001 length     1 segment .bsct, initialized
+start 00008088 end 00008089 length     1 segment .bsct, from
+start 00000001 end 0000000f length    14 segment .ubsct
+start 0000000f end 0000000f length     0 segment .bit
+start 0000000f end 0000000f length     0 segment .share
+start 00000100 end 00000100 length     0 segment .data
+start 00000100 end 00000100 length     0 segment .bss
+start 00000000 end 00000365 length   869 segment .info.
+start 00000000 end 00011b27 length 72487 segment .debug
+start 00008000 end 00008080 length   128 segment .const
+start 00008080 end 00008088 length     8 segment .init
+
+
+                               -------
+                               Modules
+                               -------
+
+d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8:
+start 00008089 end 000080d4 length    75 section .text
+start 00000100 end 00000100 length     0 section .bss
+start 00000001 end 00000001 length     0 section .ubsct
+start 00000000 end 0000002f length    47 section .info.
+
+Debug\clock.o:
+start ******** end ******** length     0 section .text *** removed ***
+start 00000000 end 00003902 length 14594 section .debug
+start 0000002f end 0000009c length   109 section .info.
+
+Debug\delay.o:
+start 000080d4 end 000080e6 length    18 section .text
+start 00003902 end 0000712b length 14377 section .debug
+start 0000009c end 00000109 length   109 section .info.
+
+Debug\io_init.o:
+start 000080e6 end 000080f7 length    17 section .text
+start 0000712b end 0000a93a length 14351 section .debug
+start 00000109 end 00000178 length   111 section .info.
+
+Debug\main.o:
+start 000080f7 end 00008151 length    90 section .text
+start 00000000 end 00000001 length     1 section .bsct
+start 00000001 end 00000009 length     8 section .ubsct
+start 0000a93a end 0000e19f length 14437 section .debug
+start 00000178 end 000001e4 length   108 section .info.
+
+Debug\spi_masterinit.o:
+start 00008151 end 00008172 length    33 section .text
+start 0000e19f end 000119bc length 14365 section .debug
+start 000001e4 end 0000025a length   118 section .info.
+
+(d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\libm0.sm8)xreg.o:
+start 00000009 end 0000000c length     3 section .ubsct
+start 0000025a end 00000288 length    46 section .info.
+
+(d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\libm0.sm8)yreg.o:
+start 0000000c end 0000000f length     3 section .ubsct
+start 00000288 end 000002b6 length    46 section .info.
+
+Debug\stm8_interrupt_vector.o:
+start 00008172 end 00008173 length     1 section .text
+start 000119bc end 00011b27 length   363 section .debug
+start 000002b6 end 00000333 length   125 section .info.
+start 00008000 end 00008080 length   128 section .const
+
+
+                             -----------
+                             Stack usage
+                             -----------
+
+Debug\delay.o:
+_delay                      4   (4)
+
+Debug\io_init.o:
+_IO_init                    2   (2)
+
+Debug\main.o:
+_main                  >    7   (3)
+
+Debug\spi_masterinit.o:
+_SPI_MasterInit             2   (2)
+
+Debug\stm8_interrupt_vector.o:
+f_NonHandledInterrupt  >    5   (5)
+
+Stack size: 12
+
+
+                              ---------
+                              Call tree
+                              ---------
+   1 > __stext: (0)
+
+   2 > _main: (3)
+   3      + _IO_init: (2)
+   4      + _SPI_MasterInit: (2)
+   5      + _delay: (4)
+       
+   6 > f_NonHandledInterrupt: (5)
+
+   7   _IO_init --> 3
+
+   8   _SPI_MasterInit --> 4
+
+   9   _delay --> 5
+
+
+
+                               -------
+                               Symbols
+                               -------
+
+_ADC_AWCR               0000540e   defined in Debug\clock.o
+_ADC_AWCRH              0000540e   defined in Debug\clock.o
+_ADC_AWCRL              0000540f   defined in Debug\clock.o
+_ADC_AWSR               0000540c   defined in Debug\clock.o
+_ADC_AWSRH              0000540c   defined in Debug\clock.o
+_ADC_AWSRL              0000540d   defined in Debug\clock.o
+_ADC_CR1                00005401   defined in Debug\clock.o
+_ADC_CR2                00005402   defined in Debug\clock.o
+_ADC_CR3                00005403   defined in Debug\clock.o
+_ADC_CSR                00005400   defined in Debug\clock.o
+_ADC_DB0R               000053e0   defined in Debug\clock.o
+_ADC_DB0RH              000053e0   defined in Debug\clock.o
+_ADC_DB0RL              000053e1   defined in Debug\clock.o
+_ADC_DB1R               000053e2   defined in Debug\clock.o
+_ADC_DB1RH              000053e2   defined in Debug\clock.o
+_ADC_DB1RL              000053e3   defined in Debug\clock.o
+_ADC_DB2R               000053e4   defined in Debug\clock.o
+_ADC_DB2RH              000053e4   defined in Debug\clock.o
+_ADC_DB2RL              000053e5   defined in Debug\clock.o
+_ADC_DB3R               000053e6   defined in Debug\clock.o
+_ADC_DB3RH              000053e6   defined in Debug\clock.o
+_ADC_DB3RL              000053e7   defined in Debug\clock.o
+_ADC_DB4R               000053e8   defined in Debug\clock.o
+_ADC_DB4RH              000053e8   defined in Debug\clock.o
+_ADC_DB4RL              000053e9   defined in Debug\clock.o
+_ADC_DB5R               000053ea   defined in Debug\clock.o
+_ADC_DB5RH              000053ea   defined in Debug\clock.o
+_ADC_DB5RL              000053eb   defined in Debug\clock.o
+_ADC_DB6R               000053ec   defined in Debug\clock.o
+_ADC_DB6RH              000053ec   defined in Debug\clock.o
+_ADC_DB6RL              000053ed   defined in Debug\clock.o
+_ADC_DB7R               000053ee   defined in Debug\clock.o
+_ADC_DB7RH              000053ee   defined in Debug\clock.o
+_ADC_DB7RL              000053ef   defined in Debug\clock.o
+_ADC_DB8R               000053f0   defined in Debug\clock.o
+_ADC_DB8RH              000053f0   defined in Debug\clock.o
+_ADC_DB8RL              000053f1   defined in Debug\clock.o
+_ADC_DB9R               000053f2   defined in Debug\clock.o
+_ADC_DB9RH              000053f2   defined in Debug\clock.o
+_ADC_DB9RL              000053f3   defined in Debug\clock.o
+_ADC_DR                 00005404   defined in Debug\clock.o
+_ADC_DRH                00005404   defined in Debug\clock.o
+_ADC_DRL                00005405   defined in Debug\clock.o
+_ADC_HTR                00005408   defined in Debug\clock.o
+_ADC_HTRH               00005408   defined in Debug\clock.o
+_ADC_HTRL               00005409   defined in Debug\clock.o
+_ADC_LTR                0000540a   defined in Debug\clock.o
+_ADC_LTRH               0000540a   defined in Debug\clock.o
+_ADC_LTRL               0000540b   defined in Debug\clock.o
+_ADC_TDR                00005406   defined in Debug\clock.o
+_ADC_TDRH               00005406   defined in Debug\clock.o
+_ADC_TDRL               00005407   defined in Debug\clock.o
+_AWU_APR                000050f1   defined in Debug\clock.o
+_AWU_CSR                000050f0   defined in Debug\clock.o
+_AWU_TBR                000050f2   defined in Debug\clock.o
+_BEEP_CSR               000050f3   defined in Debug\clock.o
+_BUS_16M                ********   *** removed from Debug\clock.o ***
+_CFG_GCR                00007f60   defined in Debug\clock.o
+_CLK_CANCCR             000050cb   defined in Debug\clock.o
+_CLK_CCOR               000050c9   defined in Debug\clock.o
+_CLK_CKDIVR             000050c6   defined in Debug\clock.o
+_CLK_CMSR               000050c3   defined in Debug\clock.o
+_CLK_CSSR               000050c8   defined in Debug\clock.o
+_CLK_ECKR               000050c1   defined in Debug\clock.o
+_CLK_HSITRIMR           000050cc   defined in Debug\clock.o
+_CLK_ICKR               000050c0   defined in Debug\clock.o
+_CLK_PCKENR1            000050c7   defined in Debug\clock.o
+_CLK_PCKENR2            000050ca   defined in Debug\clock.o
+_CLK_SWCR               000050c5   defined in Debug\clock.o
+_CLK_SWIMCCR            000050cd   defined in Debug\clock.o
+_CLK_SWR                000050c4   defined in Debug\clock.o
+_Data                   00000001   defined in Debug\main.o section .ubsct
+_Delay1ms               ********   *** removed from Debug\clock.o ***
+_Delay1us               ********   *** removed from Debug\clock.o ***
+_EXTI_CR1               000050a0   defined in Debug\clock.o
+_EXTI_CR2               000050a1   defined in Debug\clock.o
+_FLASH_CR1              0000505a   defined in Debug\clock.o
+_FLASH_CR2              0000505b   defined in Debug\clock.o
+_FLASH_DUKR             00005064   defined in Debug\clock.o
+_FLASH_FPR              0000505d   defined in Debug\clock.o
+_FLASH_IAPSR            0000505f   defined in Debug\clock.o
+_FLASH_NCR2             0000505c   defined in Debug\clock.o
+_FLASH_NFPR             0000505e   defined in Debug\clock.o
+_FLASH_PUKR             00005062   defined in Debug\clock.o
+_I2C_CCRH               0000521c   defined in Debug\clock.o
+_I2C_CCRL               0000521b   defined in Debug\clock.o
+_I2C_CR1                00005210   defined in Debug\clock.o
+_I2C_CR2                00005211   defined in Debug\clock.o
+_I2C_DR                 00005216   defined in Debug\clock.o
+_I2C_FREQR              00005212   defined in Debug\clock.o
+_I2C_ITR                0000521a   defined in Debug\clock.o
+_I2C_OARH               00005214   defined in Debug\clock.o
+_I2C_OARL               00005213   defined in Debug\clock.o
+_I2C_PECR               0000521e   defined in Debug\clock.o
+_I2C_SR1                00005217   defined in Debug\clock.o
+_I2C_SR2                00005218   defined in Debug\clock.o
+_I2C_SR3                00005219   defined in Debug\clock.o
+_I2C_TRISER             0000521d   defined in Debug\clock.o
+_IO_init                000080e6   defined in Debug\io_init.o section .text
+                                   used in Debug\main.o
+_ITC_SPR1               00007f70   defined in Debug\clock.o
+_ITC_SPR2               00007f71   defined in Debug\clock.o
+_ITC_SPR3               00007f72   defined in Debug\clock.o
+_ITC_SPR4               00007f73   defined in Debug\clock.o
+_ITC_SPR5               00007f74   defined in Debug\clock.o
+_ITC_SPR6               00007f75   defined in Debug\clock.o
+_ITC_SPR7               00007f76   defined in Debug\clock.o
+_IWDG_KR                000050e0   defined in Debug\clock.o
+_IWDG_PR                000050e1   defined in Debug\clock.o
+_IWDG_RLR               000050e2   defined in Debug\clock.o
+_PA_CR1                 00005003   defined in Debug\clock.o
+_PA_CR1_1               005003:1   defined in Debug\clock.o
+_PA_CR1_2               005003:2   defined in Debug\clock.o
+_PA_CR1_3               005003:3   defined in Debug\clock.o
+_PA_CR1_4               005003:4   defined in Debug\clock.o
+_PA_CR1_5               005003:5   defined in Debug\clock.o
+_PA_CR1_6               005003:6   defined in Debug\clock.o
+_PA_CR2                 00005004   defined in Debug\clock.o
+_PA_CR2_1               005004:1   defined in Debug\clock.o
+_PA_CR2_2               005004:2   defined in Debug\clock.o
+_PA_CR2_3               005004:3   defined in Debug\clock.o
+_PA_CR2_4               005004:4   defined in Debug\clock.o
+_PA_CR2_5               005004:5   defined in Debug\clock.o
+_PA_CR2_6               005004:6   defined in Debug\clock.o
+_PA_DDR                 00005002   defined in Debug\clock.o
+_PA_DDR_1               005002:1   defined in Debug\clock.o
+_PA_DDR_2               005002:2   defined in Debug\clock.o
+_PA_DDR_3               005002:3   defined in Debug\clock.o
+_PA_DDR_4               005002:4   defined in Debug\clock.o
+_PA_DDR_5               005002:5   defined in Debug\clock.o
+_PA_DDR_6               005002:6   defined in Debug\clock.o
+_PA_IDR                 00005001   defined in Debug\clock.o
+_PA_IDR_1               005001:1   defined in Debug\clock.o
+_PA_IDR_2               005001:2   defined in Debug\clock.o
+_PA_IDR_3               005001:3   defined in Debug\clock.o
+_PA_IDR_4               005001:4   defined in Debug\clock.o
+_PA_IDR_5               005001:5   defined in Debug\clock.o
+_PA_IDR_6               005001:6   defined in Debug\clock.o
+_PA_ODR                 00005000   defined in Debug\clock.o
+_PA_ODR_1               005000:1   defined in Debug\clock.o
+_PA_ODR_2               005000:2   defined in Debug\clock.o
+_PA_ODR_3               005000:3   defined in Debug\clock.o
+_PA_ODR_4               005000:4   defined in Debug\clock.o
+_PA_ODR_5               005000:5   defined in Debug\clock.o
+_PA_ODR_6               005000:6   defined in Debug\clock.o
+_PB_CR1                 00005008   defined in Debug\clock.o
+_PB_CR1_0               005008:0   defined in Debug\clock.o
+_PB_CR1_1               005008:1   defined in Debug\clock.o
+_PB_CR1_2               005008:2   defined in Debug\clock.o
+_PB_CR1_3               005008:3   defined in Debug\clock.o
+_PB_CR1_4               005008:4   defined in Debug\clock.o
+_PB_CR1_5               005008:5   defined in Debug\clock.o
+_PB_CR1_6               005008:6   defined in Debug\clock.o
+_PB_CR1_7               005008:7   defined in Debug\clock.o
+_PB_CR2                 00005009   defined in Debug\clock.o
+_PB_CR2_0               005009:0   defined in Debug\clock.o
+_PB_CR2_1               005009:1   defined in Debug\clock.o
+_PB_CR2_2               005009:2   defined in Debug\clock.o
+_PB_CR2_3               005009:3   defined in Debug\clock.o
+_PB_CR2_4               005009:4   defined in Debug\clock.o
+_PB_CR2_5               005009:5   defined in Debug\clock.o
+_PB_CR2_6               005009:6   defined in Debug\clock.o
+_PB_CR2_7               005009:7   defined in Debug\clock.o
+_PB_DDR                 00005007   defined in Debug\clock.o
+_PB_DDR_0               005007:0   defined in Debug\clock.o
+_PB_DDR_1               005007:1   defined in Debug\clock.o
+_PB_DDR_2               005007:2   defined in Debug\clock.o
+_PB_DDR_3               005007:3   defined in Debug\clock.o
+_PB_DDR_4               005007:4   defined in Debug\clock.o
+_PB_DDR_5               005007:5   defined in Debug\clock.o
+_PB_DDR_6               005007:6   defined in Debug\clock.o
+_PB_DDR_7               005007:7   defined in Debug\clock.o
+_PB_IDR                 00005006   defined in Debug\clock.o
+_PB_IDR_0               005006:0   defined in Debug\clock.o
+_PB_IDR_1               005006:1   defined in Debug\clock.o
+_PB_IDR_2               005006:2   defined in Debug\clock.o
+_PB_IDR_3               005006:3   defined in Debug\clock.o
+_PB_IDR_4               005006:4   defined in Debug\clock.o
+_PB_IDR_5               005006:5   defined in Debug\clock.o
+_PB_IDR_6               005006:6   defined in Debug\clock.o
+_PB_IDR_7               005006:7   defined in Debug\clock.o
+_PB_ODR                 00005005   defined in Debug\clock.o
+_PB_ODR_0               005005:0   defined in Debug\clock.o
+_PB_ODR_1               005005:1   defined in Debug\clock.o
+_PB_ODR_2               005005:2   defined in Debug\clock.o
+_PB_ODR_3               005005:3   defined in Debug\clock.o
+_PB_ODR_4               005005:4   defined in Debug\clock.o
+_PB_ODR_5               005005:5   defined in Debug\clock.o
+_PB_ODR_6               005005:6   defined in Debug\clock.o
+_PB_ODR_7               005005:7   defined in Debug\clock.o
+_PC_CR1                 0000500d   defined in Debug\clock.o
+_PC_CR1_1               00500d:1   defined in Debug\clock.o
+_PC_CR1_2               00500d:2   defined in Debug\clock.o
+_PC_CR1_3               00500d:3   defined in Debug\clock.o
+_PC_CR1_4               00500d:4   defined in Debug\clock.o
+_PC_CR1_5               00500d:5   defined in Debug\clock.o
+_PC_CR1_6               00500d:6   defined in Debug\clock.o
+_PC_CR1_7               00500d:7   defined in Debug\clock.o
+_PC_CR2                 0000500e   defined in Debug\clock.o
+_PC_CR2_1               00500e:1   defined in Debug\clock.o
+_PC_CR2_2               00500e:2   defined in Debug\clock.o
+_PC_CR2_3               00500e:3   defined in Debug\clock.o
+_PC_CR2_4               00500e:4   defined in Debug\clock.o
+_PC_CR2_5               00500e:5   defined in Debug\clock.o
+_PC_CR2_6               00500e:6   defined in Debug\clock.o
+_PC_CR2_7               00500e:7   defined in Debug\clock.o
+_PC_DDR                 0000500c   defined in Debug\clock.o
+_PC_DDR_1               00500c:1   defined in Debug\clock.o
+_PC_DDR_2               00500c:2   defined in Debug\clock.o
+_PC_DDR_3               00500c:3   defined in Debug\clock.o
+_PC_DDR_4               00500c:4   defined in Debug\clock.o
+_PC_DDR_5               00500c:5   defined in Debug\clock.o
+_PC_DDR_6               00500c:6   defined in Debug\clock.o
+_PC_DDR_7               00500c:7   defined in Debug\clock.o
+_PC_IDR                 0000500b   defined in Debug\clock.o
+_PC_IDR_1               00500b:1   defined in Debug\clock.o
+_PC_IDR_2               00500b:2   defined in Debug\clock.o
+_PC_IDR_3               00500b:3   defined in Debug\clock.o
+_PC_IDR_4               00500b:4   defined in Debug\clock.o
+_PC_IDR_5               00500b:5   defined in Debug\clock.o
+_PC_IDR_6               00500b:6   defined in Debug\clock.o
+_PC_IDR_7               00500b:7   defined in Debug\clock.o
+_PC_ODR                 0000500a   defined in Debug\clock.o
+_PC_ODR_1               00500a:1   defined in Debug\clock.o
+_PC_ODR_2               00500a:2   defined in Debug\clock.o
+_PC_ODR_3               00500a:3   defined in Debug\clock.o
+_PC_ODR_4               00500a:4   defined in Debug\clock.o
+_PC_ODR_5               00500a:5   defined in Debug\clock.o
+_PC_ODR_6               00500a:6   defined in Debug\clock.o
+_PC_ODR_7               00500a:7   defined in Debug\clock.o
+_PD_CR1                 00005012   defined in Debug\clock.o
+_PD_CR1_0               005012:0   defined in Debug\clock.o
+_PD_CR1_1               005012:1   defined in Debug\clock.o
+_PD_CR1_2               005012:2   defined in Debug\clock.o
+_PD_CR1_3               005012:3   defined in Debug\clock.o
+_PD_CR1_4               005012:4   defined in Debug\clock.o
+_PD_CR1_5               005012:5   defined in Debug\clock.o
+_PD_CR1_6               005012:6   defined in Debug\clock.o
+_PD_CR1_7               005012:7   defined in Debug\clock.o
+_PD_CR2                 00005013   defined in Debug\clock.o
+_PD_CR2_0               005013:0   defined in Debug\clock.o
+_PD_CR2_1               005013:1   defined in Debug\clock.o
+_PD_CR2_2               005013:2   defined in Debug\clock.o
+_PD_CR2_3               005013:3   defined in Debug\clock.o
+_PD_CR2_4               005013:4   defined in Debug\clock.o
+_PD_CR2_5               005013:5   defined in Debug\clock.o
+_PD_CR2_6               005013:6   defined in Debug\clock.o
+_PD_CR2_7               005013:7   defined in Debug\clock.o
+_PD_DDR                 00005011   defined in Debug\clock.o
+_PD_DDR_0               005011:0   defined in Debug\clock.o
+_PD_DDR_1               005011:1   defined in Debug\clock.o
+_PD_DDR_2               005011:2   defined in Debug\clock.o
+_PD_DDR_3               005011:3   defined in Debug\clock.o
+_PD_DDR_4               005011:4   defined in Debug\clock.o
+_PD_DDR_5               005011:5   defined in Debug\clock.o
+_PD_DDR_6               005011:6   defined in Debug\clock.o
+_PD_DDR_7               005011:7   defined in Debug\clock.o
+_PD_IDR                 00005010   defined in Debug\clock.o
+_PD_IDR_0               005010:0   defined in Debug\clock.o
+_PD_IDR_1               005010:1   defined in Debug\clock.o
+_PD_IDR_2               005010:2   defined in Debug\clock.o
+_PD_IDR_3               005010:3   defined in Debug\clock.o
+_PD_IDR_4               005010:4   defined in Debug\clock.o
+_PD_IDR_5               005010:5   defined in Debug\clock.o
+_PD_IDR_6               005010:6   defined in Debug\clock.o
+_PD_IDR_7               005010:7   defined in Debug\clock.o
+_PD_ODR                 0000500f   defined in Debug\clock.o
+_PD_ODR_0               00500f:0   defined in Debug\clock.o
+_PD_ODR_1               00500f:1   defined in Debug\clock.o
+_PD_ODR_2               00500f:2   defined in Debug\clock.o
+_PD_ODR_3               00500f:3   defined in Debug\clock.o
+_PD_ODR_4               00500f:4   defined in Debug\clock.o
+_PD_ODR_5               00500f:5   defined in Debug\clock.o
+_PD_ODR_6               00500f:6   defined in Debug\clock.o
+_PD_ODR_7               00500f:7   defined in Debug\clock.o
+_PE_CR1                 00005017   defined in Debug\clock.o
+_PE_CR1_0               005017:0   defined in Debug\clock.o
+_PE_CR1_1               005017:1   defined in Debug\clock.o
+_PE_CR1_2               005017:2   defined in Debug\clock.o
+_PE_CR1_3               005017:3   defined in Debug\clock.o
+_PE_CR1_5               005017:5   defined in Debug\clock.o
+_PE_CR1_6               005017:6   defined in Debug\clock.o
+_PE_CR1_7               005017:7   defined in Debug\clock.o
+_PE_CR2                 00005018   defined in Debug\clock.o
+_PE_CR2_0               005018:0   defined in Debug\clock.o
+_PE_CR2_1               005018:1   defined in Debug\clock.o
+_PE_CR2_2               005018:2   defined in Debug\clock.o
+_PE_CR2_3               005018:3   defined in Debug\clock.o
+_PE_CR2_5               005018:5   defined in Debug\clock.o
+_PE_CR2_6               005018:6   defined in Debug\clock.o
+_PE_CR2_7               005018:7   defined in Debug\clock.o
+_PE_DDR                 00005016   defined in Debug\clock.o
+_PE_DDR_0               005016:0   defined in Debug\clock.o
+_PE_DDR_1               005016:1   defined in Debug\clock.o
+_PE_DDR_2               005016:2   defined in Debug\clock.o
+_PE_DDR_3               005016:3   defined in Debug\clock.o
+_PE_DDR_5               005016:5   defined in Debug\clock.o
+_PE_DDR_6               005016:6   defined in Debug\clock.o
+_PE_DDR_7               005016:7   defined in Debug\clock.o
+_PE_IDR                 00005015   defined in Debug\clock.o
+_PE_IDR_0               005015:0   defined in Debug\clock.o
+_PE_IDR_1               005015:1   defined in Debug\clock.o
+_PE_IDR_2               005015:2   defined in Debug\clock.o
+_PE_IDR_3               005015:3   defined in Debug\clock.o
+_PE_IDR_5               005015:5   defined in Debug\clock.o
+_PE_IDR_6               005015:6   defined in Debug\clock.o
+_PE_IDR_7               005015:7   defined in Debug\clock.o
+_PE_ODR                 00005014   defined in Debug\clock.o
+_PE_ODR_0               005014:0   defined in Debug\clock.o
+_PE_ODR_1               005014:1   defined in Debug\clock.o
+_PE_ODR_2               005014:2   defined in Debug\clock.o
+_PE_ODR_3               005014:3   defined in Debug\clock.o
+_PE_ODR_5               005014:5   defined in Debug\clock.o
+_PE_ODR_6               005014:6   defined in Debug\clock.o
+_PE_ODR_7               005014:7   defined in Debug\clock.o
+_PG_CR1                 00005021   defined in Debug\clock.o
+_PG_CR1_0               005021:0   defined in Debug\clock.o
+_PG_CR1_1               005021:1   defined in Debug\clock.o
+_PG_CR2                 00005022   defined in Debug\clock.o
+_PG_CR2_0               005022:0   defined in Debug\clock.o
+_PG_CR2_1               005022:1   defined in Debug\clock.o
+_PG_DDR                 00005020   defined in Debug\clock.o
+_PG_DDR_0               005020:0   defined in Debug\clock.o
+_PG_DDR_1               005020:1   defined in Debug\clock.o
+_PG_IDR                 0000501f   defined in Debug\clock.o
+_PG_IDR_0               00501f:0   defined in Debug\clock.o
+_PG_IDR_1               00501f:1   defined in Debug\clock.o
+_PG_ODR                 0000501e   defined in Debug\clock.o
+_PG_ODR_0               00501e:0   defined in Debug\clock.o
+_PG_ODR_1               00501e:1   defined in Debug\clock.o
+_RST_SR                 000050b3   defined in Debug\clock.o
+_SPI_CR1                00005200   defined in Debug\clock.o
+_SPI_CR2                00005201   defined in Debug\clock.o
+_SPI_CRCPR              00005205   defined in Debug\clock.o
+_SPI_DR                 00005204   defined in Debug\clock.o
+_SPI_ICR                00005202   defined in Debug\clock.o
+_SPI_MasterInit         00008151   defined in Debug\spi_masterinit.o section .text
+                                   used in Debug\main.o
+_SPI_RXCRCR             00005206   defined in Debug\clock.o
+_SPI_SR                 00005203   defined in Debug\clock.o
+_SPI_TXCRCR             00005207   defined in Debug\clock.o
+_TIM1_ARR               00005262   defined in Debug\clock.o
+_TIM1_ARRH              00005262   defined in Debug\clock.o
+_TIM1_ARRL              00005263   defined in Debug\clock.o
+_TIM1_BKR               0000526d   defined in Debug\clock.o
+_TIM1_CCER1             0000525c   defined in Debug\clock.o
+_TIM1_CCER2             0000525d   defined in Debug\clock.o
+_TIM1_CCMR1             00005258   defined in Debug\clock.o
+_TIM1_CCMR2             00005259   defined in Debug\clock.o
+_TIM1_CCMR3             0000525a   defined in Debug\clock.o
+_TIM1_CCMR4             0000525b   defined in Debug\clock.o
+_TIM1_CCR1              00005265   defined in Debug\clock.o
+_TIM1_CCR1H             00005265   defined in Debug\clock.o
+_TIM1_CCR1L             00005266   defined in Debug\clock.o
+_TIM1_CCR2              00005267   defined in Debug\clock.o
+_TIM1_CCR2H             00005267   defined in Debug\clock.o
+_TIM1_CCR2L             00005268   defined in Debug\clock.o
+_TIM1_CCR3              00005269   defined in Debug\clock.o
+_TIM1_CCR3H             00005269   defined in Debug\clock.o
+_TIM1_CCR3L             0000526a   defined in Debug\clock.o
+_TIM1_CCR4              0000526b   defined in Debug\clock.o
+_TIM1_CCR4H             0000526b   defined in Debug\clock.o
+_TIM1_CCR4L             0000526c   defined in Debug\clock.o
+_TIM1_CNTR              0000525e   defined in Debug\clock.o
+_TIM1_CNTRH             0000525e   defined in Debug\clock.o
+_TIM1_CNTRL             0000525f   defined in Debug\clock.o
+_TIM1_CR1               00005250   defined in Debug\clock.o
+_TIM1_CR2               00005251   defined in Debug\clock.o
+_TIM1_DTR               0000526e   defined in Debug\clock.o
+_TIM1_EGR               00005257   defined in Debug\clock.o
+_TIM1_ETR               00005253   defined in Debug\clock.o
+_TIM1_IER               00005254   defined in Debug\clock.o
+_TIM1_OISR              0000526f   defined in Debug\clock.o
+_TIM1_PSCR              00005260   defined in Debug\clock.o
+_TIM1_PSCRH             00005260   defined in Debug\clock.o
+_TIM1_PSCRL             00005261   defined in Debug\clock.o
+_TIM1_RCR               00005264   defined in Debug\clock.o
+_TIM1_SMCR              00005252   defined in Debug\clock.o
+_TIM1_SR1               00005255   defined in Debug\clock.o
+_TIM1_SR2               00005256   defined in Debug\clock.o
+_TIM2_ARR               0000530d   defined in Debug\clock.o
+_TIM2_ARRH              0000530d   defined in Debug\clock.o
+_TIM2_ARRL              0000530e   defined in Debug\clock.o
+_TIM2_CCER1             00005308   defined in Debug\clock.o
+_TIM2_CCER2             00005309   defined in Debug\clock.o
+_TIM2_CCMR1             00005305   defined in Debug\clock.o
+_TIM2_CCMR2             00005306   defined in Debug\clock.o
+_TIM2_CCMR3             00005307   defined in Debug\clock.o
+_TIM2_CCR1              0000530f   defined in Debug\clock.o
+_TIM2_CCR1H             0000530f   defined in Debug\clock.o
+_TIM2_CCR1L             00005310   defined in Debug\clock.o
+_TIM2_CCR2              00005311   defined in Debug\clock.o
+_TIM2_CCR2H             00005311   defined in Debug\clock.o
+_TIM2_CCR2L             00005312   defined in Debug\clock.o
+_TIM2_CCR3              00005313   defined in Debug\clock.o
+_TIM2_CCR3H             00005313   defined in Debug\clock.o
+_TIM2_CCR3L             00005314   defined in Debug\clock.o
+_TIM2_CNTR              0000530a   defined in Debug\clock.o
+_TIM2_CNTRH             0000530a   defined in Debug\clock.o
+_TIM2_CNTRL             0000530b   defined in Debug\clock.o
+_TIM2_CR1               00005300   defined in Debug\clock.o
+_TIM2_EGR               00005304   defined in Debug\clock.o
+_TIM2_IER               00005301   defined in Debug\clock.o
+_TIM2_PSCR              0000530c   defined in Debug\clock.o
+_TIM2_SR1               00005302   defined in Debug\clock.o
+_TIM2_SR2               00005303   defined in Debug\clock.o
+_TIM3_ARR               0000532b   defined in Debug\clock.o
+_TIM3_ARRH              0000532b   defined in Debug\clock.o
+_TIM3_ARRL              0000532c   defined in Debug\clock.o
+_TIM3_CCER1             00005327   defined in Debug\clock.o
+_TIM3_CCMR1             00005325   defined in Debug\clock.o
+_TIM3_CCMR2             00005326   defined in Debug\clock.o
+_TIM3_CCR1              0000532d   defined in Debug\clock.o
+_TIM3_CCR1H             0000532d   defined in Debug\clock.o
+_TIM3_CCR1L             0000532e   defined in Debug\clock.o
+_TIM3_CCR2              0000532f   defined in Debug\clock.o
+_TIM3_CCR2H             0000532f   defined in Debug\clock.o
+_TIM3_CCR2L             00005330   defined in Debug\clock.o
+_TIM3_CNTR              00005328   defined in Debug\clock.o
+_TIM3_CNTRH             00005328   defined in Debug\clock.o
+_TIM3_CNTRL             00005329   defined in Debug\clock.o
+_TIM3_CR1               00005320   defined in Debug\clock.o
+_TIM3_EGR               00005324   defined in Debug\clock.o
+_TIM3_IER               00005321   defined in Debug\clock.o
+_TIM3_PSCR              0000532a   defined in Debug\clock.o
+_TIM3_SR1               00005322   defined in Debug\clock.o
+_TIM3_SR2               00005323   defined in Debug\clock.o
+_TIM4_ARR               00005346   defined in Debug\clock.o
+_TIM4_CNTR              00005344   defined in Debug\clock.o
+_TIM4_CR1               00005340   defined in Debug\clock.o
+_TIM4_EGR               00005343   defined in Debug\clock.o
+_TIM4_IER               00005341   defined in Debug\clock.o
+_TIM4_PSCR              00005345   defined in Debug\clock.o
+_TIM4_SR                00005342   defined in Debug\clock.o
+_UART2_BRR1             00005242   defined in Debug\clock.o
+_UART2_BRR2             00005243   defined in Debug\clock.o
+_UART2_CR1              00005244   defined in Debug\clock.o
+_UART2_CR2              00005245   defined in Debug\clock.o
+_UART2_CR3              00005246   defined in Debug\clock.o
+_UART2_CR4              00005247   defined in Debug\clock.o
+_UART2_CR5              00005248   defined in Debug\clock.o
+_UART2_CR6              00005249   defined in Debug\clock.o
+_UART2_DR               00005241   defined in Debug\clock.o
+_UART2_GTR              0000524a   defined in Debug\clock.o
+_UART2_PSCR             0000524b   defined in Debug\clock.o
+_UART2_SR               00005240   defined in Debug\clock.o
+_WWDG_CR                000050d1   defined in Debug\clock.o
+_WWDG_WR                000050d2   defined in Debug\clock.o
+__endmem                000005ff   defined in command file
+                                   *** not used ***
+__endzp                 0000000f   defined in command file section .ubsct
+                                   used in d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__idesc__               00008080   defined in linker section .init
+                                   used in d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__memory                00000100   defined in command file section .bss
+                                   used in d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__stack                 000007ff   defined in command file
+                                   used in d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__startmem              00000100   defined in command file section .bss
+                                   *** not used ***
+__stext                 00008089   defined in d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8 section .text
+                                   used in Debug\stm8_interrupt_vector.o
+__vectab                00008000   defined in Debug\stm8_interrupt_vector.o section .const
+_dataIndex              00000000   defined in Debug\main.o section .bsct, initialized
+_delay                  000080d4   defined in Debug\delay.o section .text
+                                   used in Debug\main.o
+_exit                   000080d2   defined in d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8 section .text
+_main                   000080f7   defined in Debug\main.o section .text
+                                   used in d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+c_x                     00000009   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\libm0.sm8)xreg.o section .ubsct
+                                   used in d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+c_y                     0000000c   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\libm0.sm8)yreg.o section .ubsct
+                                   used in d:\Program Files (x86)\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+f_NonHandledInterrupt   00008172   defined in Debug\stm8_interrupt_vector.o section .text

@@ -257,10 +257,10 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>C:\Users\Administrator\Desktop\spi\bsp</state>
-                    <state>C:\Users\Administrator\Desktop\spi\lib\inc</state>
-                    <state>C:\Users\Administrator\Desktop\spi\TimeOut</state>
-                    <state>C:\Users\Administrator\Desktop\spi\user</state>
+                    <state>C:\Users\Administrator\Desktop\spi_test\spi\bsp</state>
+                    <state>C:\Users\Administrator\Desktop\spi_test\spi\lib\inc</state>
+                    <state>C:\Users\Administrator\Desktop\spi_test\spi\TimeOut</state>
+                    <state>C:\Users\Administrator\Desktop\spi_test\spi\user</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>

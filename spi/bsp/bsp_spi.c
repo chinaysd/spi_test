@@ -2,29 +2,64 @@
 #include "string.h"
 #include "bsp_led.h"
 
+/***************************SPI相关定义**************************/
+#define SPI_GPIO_PORT           GPIOC
+#define SPI_CS_GPIO_PORT        GPIOA
+
+#define SPI_CS_PIN              GPIO_PIN_3
+#define SPI_SCLK_PIN            GPIO_PIN_5
+#define SPI_MOSI_PIN            GPIO_PIN_6
+#define SPI_MISO_PIN            GPIO_PIN_7
+ 
+/*以下设置为符合我三轴传感器对应配置*/
+#define SPI_FIRSTBIT_TYPE       SPI_FIRSTBIT_MSB//SPI_FirstBit_MSB
+#define SPI_SPEED_PRESC         SPI_BAUDRATEPRESCALER_4     
+#define SPI_MODE                SPI_MODE_SLAVE//SPI_MODE_MASTER
+#define SPI_CPOL                SPI_CLOCKPOLARITY_LOW
+#define SPI_CPHA                SPI_CLOCKPHASE_1EDGE
+#define SPI_DATA_MODE           SPI_DATADIRECTION_2LINES_FULLDUPLEX
+#define SPI_CS_CTRL             SPI_NSS_SOFT
+
 
 #if 1
 void Spi_Init(void)
 {
+  #if 0
+   //开启SPI外设时钟
+  CLK_PeripheralClockConfig(CLK_PERIPHERAL_SPI, ENABLE);
+  //SPI重置
+  SPI_DeInit();
+  //SPI相关GPIO初始化
+  GPIO_Init(SPI_CS_GPIO_PORT, SPI_CS_PIN, GPIO_MODE_IN_FL_NO_IT);
+  GPIO_Init(SPI_GPIO_PORT, SPI_SCLK_PIN, GPIO_MODE_OUT_PP_HIGH_FAST);
+  GPIO_Init(SPI_GPIO_PORT, SPI_MOSI_PIN,GPIO_MODE_IN_PU_NO_IT);
+  //此设置很关键，作为主设备一定要将其设置为输入
+  GPIO_Init(SPI_GPIO_PORT, SPI_MISO_PIN,GPIO_MODE_OUT_PP_HIGH_FAST);
+  //SPI初始化
+  SPI_Init(SPI_FIRSTBIT_TYPE, SPI_SPEED_PRESC, SPI_MODE, SPI_CPOL, SPI_CPHA,           
+  SPI_DATA_MODE, SPI_CS_CTRL,0X07);
+  //SPI启动
+  SPI_Cmd(ENABLE);
+  #else
     SPI_DeInit();
-
-    GPIO_Init(GPIOC, GPIO_PIN_7, GPIO_MODE_IN_PU_NO_IT);
-
-    GPIO_Init(GPIOC, GPIO_PIN_6, GPIO_MODE_OUT_PP_LOW_FAST);
-
+ 
+    GPIO_Init(GPIOC, GPIO_PIN_7, GPIO_MODE_OUT_PP_LOW_FAST);
+ 
+    GPIO_Init(GPIOC, GPIO_PIN_6, GPIO_MODE_IN_PU_NO_IT);
+ 
     GPIO_Init(GPIOC,GPIO_PIN_5, GPIO_MODE_OUT_PP_LOW_FAST);
-
+ 
     SPI_Init(SPI_FIRSTBIT_MSB,SPI_BAUDRATEPRESCALER_2,\
-             SPI_MODE_MASTER, SPI_CLOCKPOLARITY_LOW,\
+             SPI_MODE_SLAVE, SPI_CLOCKPOLARITY_LOW,\
              SPI_CLOCKPHASE_1EDGE,\
              SPI_DATADIRECTION_2LINES_FULLDUPLEX,\
              SPI_NSS_SOFT,7);
-
-    SPI_ITConfig(SPI_IT_RXNE,ENABLE);
+ 
     SPI_Cmd(ENABLE);
+  #endif
 }
 
-static unsigned char Spi_SendByte(unsigned char Byte)
+unsigned char Spi_SendByte(unsigned char Byte)
 {
     while(SPI_GetFlagStatus(SPI_FLAG_TXE)==RESET);
 
@@ -61,7 +96,7 @@ unsigned char Protocol_Send(unsigned char id,unsigned char addr,unsigned int Dat
 
 unsigned char Rev_Num,Rev_Data,Rev_String[RevBufSIZE];
 
-static unsigned char Spi_RevByte(void)
+unsigned char Spi_RevByte(void)
 {
     static unsigned char byte;
     while(SPI_GetFlagStatus(SPI_FLAG_RXNE)==RESET);

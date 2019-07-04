@@ -1,0 +1,34 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUS_16M	clock.c	11;"	function	signature:(void)
+BUS_16M	clock.h	5;"	prototype	signature:(void)
+Data	main.c	7;"	variable
+Delay1ms	clock.c	21;"	function	signature:(unsigned int time)
+Delay1ms	clock.h	6;"	prototype	signature:(unsigned int time)
+Delay1us	clock.c	33;"	function	signature:(unsigned int time)
+Delay1us	clock.h	7;"	prototype	signature:(unsigned int time)
+IO_init	io_init.c	4;"	function	signature:(void)
+IO_init	io_init.h	5;"	prototype	signature:(void)
+NonHandledInterrupt	stm8_interrupt_vector.c	12;"	function	signature:(void)
+SPI_MasterInit	spi_masterinit.c	11;"	function	signature:(void)
+SPI_MasterInit	spi_masterinit.h	5;"	prototype	signature:(void)
+__CLOCK_H	clock.h	2;"	macro
+__IO_init_H	io_init.h	2;"	macro
+__MAIN_H	main.h	2;"	macro
+__MODS0__	..\..\..\..\..\program files (x86)\cosmic\cxstm8_32k\hstm8\mods0.h	11;"	macro
+__SPI_MasterInit_H	spi_masterinit.h	2;"	macro
+__delay_H	delay.h	2;"	macro
+_stext	stm8_interrupt_vector.c	20;"	prototype	file:
+_vectab	stm8_interrupt_vector.c	22;"	variable
+dataIndex	main.c	7;"	variable
+delay	delay.c	4;"	function	signature:(u16 time)
+delay	delay.h	5;"	prototype	signature:(unsigned int time)
+interrupt_handler	stm8_interrupt_vector.c	9;"	member	struct:interrupt_vector	file:
+interrupt_handler_t	stm8_interrupt_vector.c	5;"	typedef	file:
+interrupt_instruction	stm8_interrupt_vector.c	8;"	member	struct:interrupt_vector	file:
+interrupt_vector	stm8_interrupt_vector.c	7;"	struct	file:
+main	main.c	8;"	function

@@ -1,26 +1,26 @@
-"C:\Users\Administrator\Desktop\spi\user\stm8s_it.c"
+"C:\Users\Administrator\Desktop\spi_test\spi\user\stm8s_it.c"
 -std=c99
 -ferror-limit=0
 -I
-C:\Users\Administrator\Desktop\spi\bsp
+C:\Users\Administrator\Desktop\spi_test\spi\bsp
 -I
-C:\Users\Administrator\Desktop\spi\lib\inc
+C:\Users\Administrator\Desktop\spi_test\spi\lib\inc
 -I
-C:\Users\Administrator\Desktop\spi\TimeOut
+C:\Users\Administrator\Desktop\spi_test\spi\TimeOut
 -I
-C:\Users\Administrator\Desktop\spi\user
+C:\Users\Administrator\Desktop\spi_test\spi\user
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\stm8\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\stm8\inc\c
 -I
-C:\Users\Administrator\Desktop\spi\bsp
+C:\Users\Administrator\Desktop\spi_test\spi\bsp
 -I
-C:\Users\Administrator\Desktop\spi\lib\inc
+C:\Users\Administrator\Desktop\spi_test\spi\lib\inc
 -I
-C:\Users\Administrator\Desktop\spi\TimeOut
+C:\Users\Administrator\Desktop\spi_test\spi\TimeOut
 -I
-C:\Users\Administrator\Desktop\spi\user
+C:\Users\Administrator\Desktop\spi_test\spi\user
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
