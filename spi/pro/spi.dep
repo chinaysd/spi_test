@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>2</fileVersion>
-    <fileChecksum>310807399</fileChecksum>
+    <fileChecksum>1549906736</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -176,6 +176,8 @@
             <file>$PROJ_DIR$\Debug\Obj\stm8s_itc.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_gpio.pbi</file>
             <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\bsp_led.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\bsp_cs.__cstat.et</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
@@ -196,6 +198,10 @@
                 <tool>
                     <name>ICCSTM8</name>
                     <file> 41</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 172</file>
                 </tool>
             </outputs>
             <inputs>
@@ -219,6 +225,10 @@
                 <tool>
                     <name>ICCSTM8</name>
                     <file> 30</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 171</file>
                 </tool>
             </outputs>
             <inputs>
@@ -251,7 +261,7 @@
             <inputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 18 98 99 17 102 104 105 39 106 15 16 34 35 38 118 107 108 109 110 111 112 114 101 97 36 76 31 103 32 33 37</file>
+                    <file> 98 18 99 17 102 104 105 39 106 15 16 34 35 38 118 107 108 109 110 111 112 114 101 97 36 76 31 103 32 33 37</file>
                 </tool>
                 <tool>
                     <name>ICCSTM8</name>
@@ -571,7 +581,7 @@
             <inputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 101 118 102 18 110 108 112 31 34 40 107 109 111 114 97 170 103 39 99 106 104 15 98 16 105 17 32 33 37 115 36 35 76</file>
+                    <file> 104 105 102 103 99 98 17 18 31 34 39 106 15 16 170 40 118 107 108 109 110 111 112 114 101 97 32 33 37 115 36 35 76</file>
                 </tool>
                 <tool>
                     <name>ICCSTM8</name>
@@ -1065,6 +1075,9 @@
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
             <tool>ILINK</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
         </forcedrebuild>
     </configuration>
 </project>

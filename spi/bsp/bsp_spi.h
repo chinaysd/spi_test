@@ -40,12 +40,6 @@ PROTOCOL_TX;
 
 
 void Spi_Init(void);
-void spi_write2read(uint8_t *wdata, uint8_t wlen, uint8_t *rdata, uint8_t rlen);
-unsigned char Protocol_Send(unsigned char id,unsigned char addr,unsigned int Data);
-
-unsigned char Spi_SendByte(unsigned char Byte);
-unsigned char Spi_RevByte(void);
-
 
 void RevDataProcessHandle(void);
 void RevDataHandle(void);

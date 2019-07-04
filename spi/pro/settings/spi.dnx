@@ -49,7 +49,7 @@
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
     <DebugChecksum>
-        <Checksum>662298710</Checksum>
+        <Checksum>2972626207</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -74,7 +74,7 @@
     <Breakpoints>
         <Bp0>_ "STD_CODE" "{$PROJ_DIR$\..\user\stm8s_it.c}.213.3" 1 0 0 0 "" 0 ""</Bp0>
         <Bp1>_ "STD_CODE" "{$PROJ_DIR$\..\bsp\bsp_spi.c}.113.8" 0 0 0 0 "" 0 ""</Bp1>
-        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\..\bsp\bsp_spi.c}.85.1" 0 0 0 0 "" 0 ""</Bp2>
+        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\..\bsp\bsp_spi.c}.85.5" 0 0 0 0 "" 0 ""</Bp2>
         <Count>3</Count>
     </Breakpoints>
     <Aliases>
