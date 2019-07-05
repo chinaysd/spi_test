@@ -11,6 +11,8 @@ void Spi_Init(void)
 {
     SPI_DeInit();
  
+    GPIO_Init(CS_PORT, CS_PIN, GPIO_MODE_IN_FL_NO_IT);
+    
     GPIO_Init(GPIOC, GPIO_PIN_7, GPIO_MODE_OUT_PP_LOW_FAST);
  
     GPIO_Init(GPIOC, GPIO_PIN_6, GPIO_MODE_IN_PU_NO_IT);
@@ -21,7 +23,7 @@ void Spi_Init(void)
              SPI_MODE_SLAVE, SPI_CLOCKPOLARITY_LOW,\
              SPI_CLOCKPHASE_1EDGE,\
              SPI_DATADIRECTION_2LINES_FULLDUPLEX,\
-             SPI_NSS_SOFT,7);
+             SPI_NSS_HARD,7);
  
     SPI_Cmd(ENABLE);
 
@@ -29,7 +31,7 @@ void Spi_Init(void)
 
 /********************************************************接收部分*************************************************/
 
-
+#if 0
 static unsigned char Spi_RevByte(void)
 {
     static unsigned char byte;
@@ -37,7 +39,18 @@ static unsigned char Spi_RevByte(void)
     byte=SPI_ReceiveData();
     return byte;
 }
-
+#else
+uint8_t spi_read()
+{
+    //选择一个无效数据发送(自定义，只是为了给从设备提供时钟)，然后读取到对应数据
+    uint8_t data = 0xff;
+    while (SPI_GetFlagStatus(SPI_FLAG_TXE) == RESET);
+    SPI_SendData(data);
+    while (SPI_GetFlagStatus(SPI_FLAG_RXNE) == RESET);
+    uint8_t rxdata  = SPI_ReceiveData();
+    return rxdata;
+}
+#endif
 static unsigned char IFComplete(void)
 {
     if(Rev_Num & 0x80){
@@ -50,7 +63,7 @@ static unsigned char IFComplete(void)
 
 void RevDataProcessHandle(void)
 {
-    Rev_Data = Spi_RevByte();
+    Rev_Data = spi_read();
     if((Rev_Num & 0x80) == 0){
         if(Rev_Num == 0x40){
            if(Rev_Data == 0x0a){
